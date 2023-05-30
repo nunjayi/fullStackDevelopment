@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #2d142c;
+            color:#5bc504;
+            padding:50px;
+            font-size: 17px;
+        }
+        main{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        section{
+            padding:20px;
+        }
+       .template{
+            padding:20px;
+            background-color: #c72c41; 
+            border-radius: 70px;
+
+        }
+       .user{
+            padding:10px;
+            background-color: #c72c41; 
+            border-radius: 20px;
+            font-size: 20px;
+
+       }
+       .added{
+            padding:10px;
+            background-color: #c72c41; 
+            border-radius: 20px;
+            font-size: 20px;
+       }
+       a{
+            color:#5bc504;
+       }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <p>MINI MESSAGING BOARD</p>
+        </div>
+    </main>
+    <section>
+        <% messages.forEach(function(message){%>
+            <br> <span class="user">
+                <strong>
+                <%= message.user%>
+                </strong>
+            </span><br>
+        <div class="template">
+            <div class="text"> 
+                 <p>  <%= message.text%></p>
+            </div> 
+        </div><br>
+    
+        <span class="added">  <%= message.added%></span>
+        <br><br>
+        <%})%>
+    </section>
+    <main>
+       <span>
+         <a href="/new">@add a new message</a>
+       </span>
+    </main>
+</body>
+</html>
